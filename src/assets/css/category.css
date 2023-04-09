@@ -97,7 +97,8 @@
     margin: 8vw 4vw 0;
   }
 }
-.gallery__container .gallery__description span {
+.gallery__container .gallery__description figcaption {
+  display: none;
   color: #AAA;
   margin-right: 25px;
   font-size: 1.4rem;
@@ -105,12 +106,12 @@
   text-transform: uppercase;
 }
 @media (max-width: 768px) {
-  .gallery__container .gallery__description span {
+  .gallery__container .gallery__description figcaption {
     margin-right: 25px;
     font-size: 4vw;
   }
 }
-.gallery__container .gallery__description span:nth-of-type(1) {
+.gallery__container .gallery__description figcaption:nth-of-type(1) {
   color: #000;
 }
 .gallery__container .gallery {
@@ -164,7 +165,7 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
-.gallery__container .gallery .tile .image__container > .hover__container > span {
+.gallery__container .gallery .tile .image__container > .hover__container > figcaption {
   transform: translate(0, 30px);
   padding-bottom: 10px;
   transition: 0.5s ease-in-out;
@@ -175,7 +176,7 @@
   color: #FFF;
 }
 @media (max-width: 768px) {
-  .gallery__container .gallery .tile .image__container > .hover__container > span {
+  .gallery__container .gallery .tile .image__container > .hover__container > figcaption {
     font-size: 3vw;
     transform: none;
     opacity: 1;
@@ -184,7 +185,7 @@
     padding-bottom: 0;
   }
 }
-.gallery__container .gallery .tile > span {
+.gallery__container .gallery .tile > figcaption {
   font-size: 1rem;
   display: block;
   margin-top: 10px;
@@ -194,7 +195,7 @@
   transition: 0.5s ease-in-out;
 }
 @media (max-width: 768px) {
-  .gallery__container .gallery .tile > span {
+  .gallery__container .gallery .tile > figcaption {
     font-size: 3vw;
     display: none;
   }
@@ -202,17 +203,17 @@
 .gallery__container .gallery .tile:hover .image__container > .hover__container {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.gallery__container .gallery .tile:hover .image__container > .hover__container > span {
+.gallery__container .gallery .tile:hover .image__container > .hover__container > figcaption {
   transform: none;
   opacity: 1;
 }
 @media (max-width: 768px) {
-  .gallery__container .gallery .tile:hover .image__container > .hover__container > span {
+  .gallery__container .gallery .tile:hover .image__container > .hover__container > figcaption {
     transform: none;
     opacity: 1;
   }
 }
-.gallery__container .gallery .tile:hover > span {
+.gallery__container .gallery .tile:hover > figcaption {
   transform: translate(10%, 0);
   opacity: 0;
 }/*# sourceMappingURL=category.css.map */
