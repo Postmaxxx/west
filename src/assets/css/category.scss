@@ -1,0 +1,238 @@
+$hovertime: .5s ease-in-out;
+@font-face {
+    font-family: "Neuzeit";
+    src: url('../fonts/NeuzeitSLTStd-Book.otf');
+}
+
+
+
+.block-hero {
+    font-family: "Neuzeit";
+
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+
+    @media (max-width:768px) {
+        margin-top: 4vw;
+    }
+
+    & > span {
+        text-transform: lowercase;
+        letter-spacing: 0rem;
+        font-size: 3.5rem;
+        font-weight: 200;
+        position: absolute;
+        left: 4vw;
+        font-weight: 100;
+        
+        @media (max-width:768px) {
+            font-size: 4vw;
+        }
+    }
+
+    div {
+        display: flex; 
+        align-items: center;
+        justify-content: flex-end;
+        @media (max-width:768px) {
+            //margin-top: 50px;
+            padding: 0;
+        }
+     
+        a {
+            font-size: 1.2rem;
+            display: none;
+            text-transform: uppercase;
+            font-weight: 200;
+            margin-right: 25px;
+            color: #000;
+            letter-spacing: .15rem;
+            
+            @media (max-width:768px) {
+                font-size: 3vw;
+                margin-right: 3vw;
+                letter-spacing: .4vw;
+            }
+
+            &.visible {
+                display: block;
+            }
+        }
+    
+        span {
+            text-transform: lowercase;
+            font-size: 1.2rem;
+            letter-spacing: .15rem;
+            text-transform: uppercase;
+            font-weight: 100;
+            color: #AAA;
+            @media (max-width:768px) {
+                font-size: 3vw;
+                letter-spacing: .4vw;
+            }
+        }
+    }
+}
+
+
+.gallery__container {
+    font-family: "Neuzeit";
+
+    h1 {
+        margin-top: 80px;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        @media (max-width:768px) {
+            margin-top: 10vw;
+            font-size: 6vw;
+        }
+    }
+
+    .gallery__description {
+        margin: 60px 10px 0;
+        border-bottom: 1px solid #000;
+        padding: 10px 0;
+        @media (max-width:768px) {
+            margin: 8vw 4vw 0;
+            
+        }
+
+        span {
+            color: #AAA;
+            margin-right: 25px;
+            font-size: 1.4rem;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+
+            @media (max-width:768px) {
+                margin-right: 25px;
+                font-size: 4vw;
+            }
+
+        }
+        
+        & span:nth-of-type(1) {
+            color: #000;
+        }
+        
+    }
+
+    .gallery {
+        margin-top: 20px;
+        padding: 0;
+        @media (max-width:768px) {
+            margin-top: 8vw;
+            padding: 0px 4vw;
+        }
+
+        .tile { 
+            padding: 0px 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            @media (max-width:768px) {
+                padding: 0;
+            }
+
+            .image__container {
+                width: 100%;
+                position: relative;
+
+                & > img {
+                    max-width: 100%;
+                    aspect-ratio: 1;
+                    object-fit: cover;
+                    transition: $hovertime;
+                }
+                
+
+                & > .hover__container {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    transition: $hovertime;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+
+                    @media (max-width:768px) {
+                        top: 85%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: rgba(0,0,0,.5);
+                    }
+
+                    & > span {
+                        transform: translate(0, 30px);
+                        padding-bottom: 10px;
+                        transition: $hovertime;
+                        opacity: 0;
+                        font-size: 1.3rem;
+                        text-transform: uppercase;
+                        letter-spacing: .25rem;
+                        color: #FFF;
+
+                        @media (max-width:768px) {
+                            font-size: 3vw;
+                            transform: none;
+                            opacity: 1;
+                            left: 0;
+                            position: relative;
+                            padding-bottom: 0;
+                        }
+
+                    }
+                }
+                
+            }
+            
+            & > span {
+                font-size: 1rem;
+                display: block;
+                margin-top: 10px;
+                text-transform: uppercase;
+                letter-spacing: .25rem;
+                position: relative;
+                transition: $hovertime; 
+
+                @media (max-width:768px) {
+                    font-size: 3vw;
+                    display: none;
+                }
+            }
+            
+            &:hover {
+                .image__container {
+                    & > .hover__container {
+                        background-color: rgba(0,0,0,.5);
+
+                        & > span {
+                            transform: none;
+                            opacity: 1;
+
+                            @media (max-width:768px) {
+                                transform: none;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    
+                    
+                }
+                
+                & > span {                    
+                    transform: translate(10%, 0);
+                    opacity: 0;
+                }
+            }
+        }
+
+
+    }
+
+}
