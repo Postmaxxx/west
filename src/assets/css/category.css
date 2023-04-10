@@ -97,8 +97,7 @@
     margin: 8vw 4vw 0;
   }
 }
-.gallery__container .gallery__description figcaption {
-  display: none;
+.gallery__container .gallery__description span {
   color: #AAA;
   margin-right: 25px;
   font-size: 1.4rem;
@@ -106,12 +105,12 @@
   text-transform: uppercase;
 }
 @media (max-width: 768px) {
-  .gallery__container .gallery__description figcaption {
+  .gallery__container .gallery__description span {
     margin-right: 25px;
     font-size: 4vw;
   }
 }
-.gallery__container .gallery__description figcaption:nth-of-type(1) {
+.gallery__container .gallery__description span:nth-of-type(1) {
   color: #000;
 }
 .gallery__container .gallery {
@@ -216,4 +215,95 @@
 .gallery__container .gallery .tile:hover > figcaption {
   transform: translate(10%, 0);
   opacity: 0;
+}
+
+.royalSlider__container {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+.royalSlider__container .close__container {
+  width: 20px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+}
+.royalSlider__container .close__container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.royalSlider__container .royalSlider {
+  visibility: hidden;
+}
+.royalSlider__container .royalSlider .rsOverflow {
+  overflow: visible;
+}
+.royalSlider__container .royalSlider .rsOverflow .rsSlide {
+  overflow: visible;
+}
+.royalSlider__container .royalSlider .rsOverflow .rsSlide .slider__item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: w-resize;
+}
+.royalSlider__container .royalSlider .rsOverflow .rsSlide .slider__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.royalSlider__container .royalSlider .rsOverflow .rsSlide .slider__item p {
+  position: absolute;
+  bottom: -50px;
+  margin-bottom: 0;
+  font-family: "Neuzeit";
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: #777;
+  font-size: 1.4rem;
+}
+.royalSlider__container .royalSlider .rsOverflow .rsArrow {
+  width: 30px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+}
+.royalSlider__container .royalSlider .rsOverflow .rsArrow.rsArrowLeft {
+  left: 3%;
+  background: url("../img/base/prev.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.royalSlider__container .royalSlider .rsOverflow .rsArrow.rsArrowRight {
+  right: 3%;
+  background: url("../img/base/next.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.rs-opened .royalSlider__container {
+  opacity: 1;
+  z-index: 9000;
+  transition: 0.5s ease-in-out;
+}
+body.rs-opened .royalSlider__container .royalSlider {
+  visibility: visible;
 }/*# sourceMappingURL=category.css.map */

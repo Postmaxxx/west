@@ -1,0 +1,642 @@
+/* Custom CSS for Westy Productions Website
+September 10, 2015
+Author: Sudarshan Thiagarajan */
+
+/* Font Licenses */
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3085653, 2015-09-03T13:55:58-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Gibson-Light by Canada Type
+ * URL: http://www.myfonts.com/fonts/canadatype/gibson/light/
+ * Copyright: Copyright &#x00A9; 2011 Rod McDonald. Published by Canada Type. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3085653
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3085652, 2015-09-03T13:54:26-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: NeuzeitSLT-Book by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/neuzeit-s/neuzeits-book/
+ * Copyright: Part of the digitally encoded machine readable outline data for producing the Typefaces provided is copyrighted (c) 1990, 2003 Linotype Library GmbH, www.linotype.com. All rights reserved. This software is the property of Linotype Library GmbH, and may no
+ * Licensed pageviews: 250,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3085652
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2f1555");
+@import url("//hello.myfonts.net/count/2f1554");
+  
+@font-face {font-family: 'Gibson-Light';src: url('webfonts/2F1555_0_0.eot');src: url('webfonts/2F1555_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2F1555_0_0.woff2') format('woff2'),url('webfonts/2F1555_0_0.woff') format('woff'),url('webfonts/2F1555_0_0.ttf') format('truetype');}
+
+@font-face {font-family: 'NeuzeitSLT-Book';src: url('webfonts/2F1554_0_0.eot');src: url('webfonts/2F1554_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2F1554_0_0.woff2') format('woff2'),url('webfonts/2F1554_0_0.woff') format('woff'),url('webfonts/2F1554_0_0.ttf') format('truetype');}
+ 
+/*Overall Text Anti-alias to match design*/
+body{
+	-moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*Homepage Edits*/
+
+#pjax-container{
+	display: block;
+	height: 100%;
+	padding: 32px 80px 0;
+	width: 100%;
+}
+
+.main-header{
+	position: relative;
+	width: 187px;
+	/*z-index: 99999;*/
+}
+
+#sticky-wrapper.is-sticky .main-header{
+	left: 80px;
+}
+
+body.homepage .main-header{
+	left: 0px;
+}
+
+.logo{
+	width: 260px;
+	margin-bottom: 90px;
+}
+
+.ajax-wrapper .close{
+	right: 70px;
+	top: 100px;
+}
+
+.logo a{
+ 	/*background: rgba(0, 0, 0, 0) url("/css/img/westy-logo-new.png") no-repeat scroll -12px 0 / 100% auto;*/
+ 	width: 260px;
+ 	background-attachment: scroll;
+background-clip: border-box;
+background-color: rgba(0, 0, 0, 0);
+background-image: url('/css/img/westy-logo-new.png');
+background-origin: padding-box;
+background-position: -12px 0px;
+background-size: 100%;
+}
+
+.main-header .inner{
+	margin: 0px;
+}
+
+nav.main-nav{
+	width: 150px;
+}
+
+
+
+.main-nav li{
+	text-transform: uppercase;
+	font-family: "NeuzeitSLT-Book", sans-serif;
+	font-size: 10px;
+	letter-spacing: .21em;
+	text-align: left;
+	line-height: 23px;
+}
+
+body.homepage .main{
+	position: relative;
+	left: 0;
+	top: 120px;
+}
+
+body.homepage .home-slogan-wrap{
+	position: relative;
+	left: 0;
+	border-top: 1px solid #000;
+	padding-top: 10px;
+}
+
+body.homepage .home-slogan-wrap .table-cell{
+	text-align: left;
+}
+
+body.homepage .home-slogan-wrap .table-cell h2{
+	font-family: "Gibson-Light", sans-serif;
+	font-size: 84px !important;
+	line-height: 85px;
+	letter-spacing: -.02em;
+	width: 730px;
+}
+
+/* Hide Footer on homepage temporarily based on #6 in Homepage edits */
+
+footer.main-footer{
+	display: none !important;
+}
+
+/* End Hide footer */
+
+body.portfolio .main,
+body.motion .main,
+body.stills .main{
+	top: 85px;
+}
+
+body.portfolio .logo,
+body.motion .logo,
+body.stills .logo{
+	width: 110%;
+	background: #fff;
+}
+
+section#masonry-container{
+	overflow-x: hidden;
+}
+
+body.motion #pjax-container{
+	/*overflow: hidden;*/
+}
+
+body.motion section#masonry-container1{
+	opacity: 1;
+	margin: 0px;
+	display: inline-block;
+	position: relative;
+	top: 80px;
+}
+
+body.motion section#masonry-container1 figure.item{
+	float: left;
+}
+
+body.portfolio .item figcaption,
+body.motion .item figcaption,
+body.stills .item figcaption{
+	font-family: "NeuzeitSLT-Book", sans-serif;
+}
+
+body.portfolio .ajax-inner .portfolio-title h3,
+body.motion .ajax-inner .portfolio-title h3,
+body.stills .ajax-inner .portfolio-title h3{
+	font-family: "NeuzeitSLT-Book", sans-serif;
+	font-size: 17px;
+	letter-spacing: -.005em;
+}
+
+body.portfolio .item .inner,
+body.motion .item .inner,
+body.stills .item .inner{
+	margin: 11px;
+}
+
+body.portfolio .ajax-wrapper,
+body.motion .ajax-wrapper,
+body.stills .ajax-wrapper{
+	z-index: 998;
+	top: 0px;
+}
+
+body.portfolio .ajax-inner .portfolio-title,
+body.motion .ajax-inner .portfolio-title,
+body.stills .ajax-inner .portfolio-title{
+	bottom: 55px;
+}
+
+body.portfolio .ajax-wrapper .inner,
+body.motion .ajax-wrapper .inner,
+body.stills .ajax-wrapper .inner{
+	margin-top: 40px;
+}
+
+body.portfolio .rsDefault .rsPreloader,
+body.motion .rsDefault .rsPreloader,
+body.stills .rsDefault .rsPreloader{
+	top: 50%;
+	left: 50%;
+	position: absolute;
+}
+
+body.services .main,
+body.clients .main,
+body.contact .main{
+	top: 24px;
+}
+
+.misc-content h2{
+	font-family: "NeuzeitSLT-Book", sans-serif;
+	font-size: 17px;
+	line-height: 17px;
+	letter-spacing: 0.2em;
+	border-bottom: 1px solid #000;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.misc-content p,
+.misc-content ul.atoz li,
+#clientele-table ul li{
+	font-family: "NeuzeitSLT-Book", sans-serif;
+	font-size: 13px;
+	line-height: 17px;
+	letter-spacing: -0.01em;
+}
+
+body.services .general-content .table{
+	max-width: 70% !important;
+}
+
+#services_info{
+	padding-left: 0px;
+}
+
+body.services .misc-content section{
+	padding: 5px 0;
+}
+
+#clientele-table h3,
+#la-address h3,
+#ny-address h3{
+	font-family: "NeuzeitSLT-Book", sans-serif;
+	font-size: 13px;
+	line-height: 17px;
+	letter-spacing: .2em;
+	border-bottom: 1px solid #000;
+	padding-bottom: 8px;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+}
+
+#clientele-table .col-md-3:last-child{
+	padding-right: 0px;
+}
+
+#first-col-clientele{
+	padding-left: 0px;
+}
+
+#la-address{
+	padding-left: 0px;
+}
+
+#ny-address{
+	padding-right: 0px;
+}
+
+#ny-address h3,
+#la-address h3{
+	margin-bottom: 18px;
+}
+
+body.portfolio .top-nav,
+body.motion .top-nav,
+body.stills .top-nav{
+	height: 180px;
+}
+
+.insta-icon{
+		position: fixed;
+		bottom: 40px;
+}
+
+.insta-icon a{
+	color: #808080;
+}	
+
+body.portfolio .portfolio-title h5,
+body.motion .portfolio-title h5,
+body.stills .portfolio-title h5{
+	color: rgb(51, 51, 51);
+	font-family: "NeuzeitSLT-Book",sans-serif;
+	font-size: 10px;
+	font-weight: 400;
+	letter-spacing: 0.21em;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+
+.slicknav_menu {
+	display:none;
+}
+
+.rsContainer{
+	width: 80%;
+	z-index: 99999;
+	margin: 0 auto;
+}
+
+/*.portfolio-title{
+	left: unset;
+	right: unset;
+	margin: 0 auto;
+	width: 100%;
+}*/
+
+img.rsImg{
+	margin-left: 0px !important;
+}
+
+.rsSlide{
+	margin: 0 auto !important;
+	text-align: center !important;
+}
+
+iframe.vimeo-iframe video, iframe.vimeo-iframe .player .video-wrapper .video{
+	background: #fff;
+}
+
+/*.video-holder-pf:after{
+	display: block;
+    content: '';
+    background: url('button.png') no-repeat center center / contain;
+    width: 100%;
+    background-size: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 1.0;
+    transition: 200ms all ease-in-out;
+}*/
+
+/*.video-holder-pf:hover:after{
+	opacity: 1.0;
+	transition: 200ms all ease-in-out;
+}*/
+
+.video-holder-pf video {
+    max-width: 100%;
+}
+
+/*Responsive Fixes*/
+
+@media only screen and (max-width: 1300px){
+	.general-content .table{
+		max-width: 100%;
+	}
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px){
+	body.motion figure.item{
+		margin-bottom: 15px;
+	}
+}
+
+@media only screen and (max-width: 990px){
+	#clientele-table .col-md-8 > div{
+		padding: 0px;
+		margin-top: 20px;
+	}
+
+	#ny-address,
+	#la-address{
+		padding: 0px;
+	}
+}
+
+@media only screen and (max-width: 800px){
+	.insta-icon{
+		display: none;
+	}
+	
+	.main-header{
+		width: 100%;
+	}
+
+	.main-header .logo{
+		width: 250px;
+	}
+
+	.main-header .logo a{
+		width: 250px;
+		height: 66px;
+	}
+
+	nav.main-nav{
+		width: 100%;
+	}
+
+	body.homepage .home-slogan-wrap .table-cell h2{
+		width: 100%;
+		font-size: 62px;
+		line-height: 75px;
+	}
+
+	body.services .general-content .table{
+		max-width: 100% !important;
+	}
+
+	.general-content .table{
+		padding-top: 0px;
+	}
+
+	#atoz{
+		margin-top: 40px;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	body.portfolio .logo,
+	body.motion .logo,
+	body.stills .logo{
+		width: 250px;
+	}
+
+	.main-header{
+		left: 0px;
+	}
+
+	.main-header .logo a{
+		background-position: center center;
+	}
+
+	body.portfolio .main,
+	body.motion .main,
+	body.stills .main{
+		top: 0px;
+	}
+
+	.top-nav{
+		display: none;
+	}
+
+	#ny-address{
+		margin-top: 50px;
+	}
+}
+
+@media only screen and (max-width: 640px){
+	body{
+		padding-top: 0px;
+	}
+
+	.main-header .logo{
+		width: 250px;
+	}
+
+	.main-header .logo a{
+		width: 250px;
+	}
+
+	.main-nav li{
+		width: 25%;
+		text-align: center;
+	}
+
+	body.homepage .home-slogan-wrap .table-cell h2{
+		width: 100%;
+		font-size: 42px !important;
+		line-height: 55px;
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px){
+	.main-header{
+		padding-top: 32px;
+		padding-bottom: 20px;
+		background-color: #fff;
+		
+	}
+}
+
+@media only screen and (max-width: 480px){
+
+	.main-nav li{
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+
+	body.homepage .home-slogan-wrap .table-cell h2{
+		font-size: 32px !important;
+		line-height: 45px;
+	}
+
+	#pjax-container{
+		padding: 20px 20px 0;
+	}
+
+	.ajax-wrapper .close{
+		top: 20px;
+	}
+
+	body.portfolio .ajax-wrapper,
+	body.motion .ajax-wrapper,
+	body.stills .ajax-wrapper{
+		top: 0;
+	}
+
+	.general-content .table{
+		min-width: unset !important;
+	}
+
+	h1.logo{
+		margin-bottom: 25px !important;
+		float: left !important;
+		padding-left: 10px;
+	}
+
+	#main-menu-element {
+		display:none;
+	}
+	
+	.slicknav_menu {
+		display:block;
+		background: #fff !important;
+	}
+
+	.respNav{
+		padding-top: 8px;
+	}
+
+	ul.slicknav_nav li a{
+		color: #000 !important;
+		font-family: "NeuzeitSLT-Book", sans-serif;
+		font-size: 10px;
+		font-weight: 400;
+		color: rgb(192,192,192);
+		text-transform: uppercase;
+		letter-spacing: 0.21em;
+	}
+
+	#sticky-wrapper.is-sticky .main-header{
+		left: 0px;
+		margin: 0 auto;
+	}
+
+	.main-header .inner{
+		padding-top: 10px;
+	}
+
+	.slicknav_menu .slicknav_icon-bar{
+		background-color: #000 !important;
+	}
+
+	a.slicknav_btn{
+		background-color: #fff !important;
+	}
+
+	body.stills .ajax-wrapper .close,
+	body.motion .ajax-wrapper .close,
+	body.portfolio .ajax-wrapper .close{
+		right: auto;
+		left: 50%;
+		top: 110px;
+		position: fixed;
+		transform: translateX(-50%);
+		width: 20px;
+		height: 20px;
+	}
+
+
+}
+
+
+@media only screen and (max-width: 1440px){
+	body.motion section#masonry-container1 figure.item{
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	body.motion section#masonry-container1 figure.item{
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
